@@ -1,0 +1,32 @@
+
+// export const fetchUser = function (id) {
+//   return _.memoize(async function (dispatch) {
+//     const response = await jsonPlaceholder.get(`/users/${id}`);
+
+//     dispatch({
+//       type: "FETCH_USER",
+//       payload: response.data,
+//     });
+//   });
+// };
+
+//Before Refactoring
+// export const fetchPosts =  () => {
+//   return async (dispatch, getState) => {
+//   const response = await jsonplaceholder.get("/posts");
+
+//   dispatch({
+//     type: "FETCH_POST",
+//     payload: response,
+//   })
+// };
+// }
+
+// Bad Approach breaking the role of redux
+//const response = await jsonplaceholder.get('/posts')
+// return {
+//     type: "FETCH_POST",
+//     payload: response
+//   };
+//error: actions must be plain objects
+//use custom middleware for async actions
